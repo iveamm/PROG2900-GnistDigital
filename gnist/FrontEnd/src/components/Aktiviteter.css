@@ -1,0 +1,237 @@
+.aktiviteter-container-unique {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-unique {
+  padding: 22px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.section-title-unique {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.activity-form-unique input[type="text"],
+.activity-form-unique input[type="date"],
+.activity-form-unique textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.activity-form-unique input[type="file"] {
+  margin-bottom: 15px;
+}
+
+.activity-form-unique button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #005A9E;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+ 
+}
+
+.activity-form-unique button:hover {
+  background-color: #004080;
+}
+
+.activity-form-unique input[type="number"] {
+  width: 99%;
+  padding: 8px;  
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+.activity-success-message-unique {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;  
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  z-index: 1500;
+}
+
+.activities-list-unique {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  max-height: 500px; 
+  overflow-y: auto; 
+  padding: 10px; 
+}
+
+
+.activity-item-unique {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+  cursor: pointer;
+}
+
+.activity-item-unique:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.activity-item-unique img {
+  width: 100%; 
+  height: 200px;  /* Set a fixed height */
+  object-fit: cover; 
+  border-radius: 5px; 
+}
+
+
+.activity-info-unique h3 {
+  margin: 0;
+  color: #005A9E;
+  font-size: 18px;
+}
+
+.activity-date-unique {
+  font-size: 14px;
+  color: #666;
+}
+
+.activity-description-unique {
+  font-size: 14px;
+  color: #333;
+}
+
+.alle-aktiviteter-unique {
+  margin-top: 20px;
+}
+
+/* Modal Styles */
+.modal-unique {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-unique {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-button-unique {
+  background-color: #D50000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.registrants-list-unique {
+  list-style: decimal inside; 
+  padding: 0; 
+  width: 100%;
+  text-align: left;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.registrant-unique {
+  margin: 5px 0; 
+  font-size: 16px; 
+  line-height: 1.5; 
+}
+
+.modal-footer-unique {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.delete-button-unique {
+  background-color: #D50000;
+  color: white;
+  padding: 10px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 100px; /* space between the buttons */
+  margin-top: -10px;
+}
+
+.close-button-unique {
+  background-color: #FFA500;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.delete-button-unique:hover{
+  background-color: darkred;
+}
+
+.close-button-unique:hover{
+  background-color: darkorange;
+}
+
+
+/* modal width on smaller screens */
+@media (max-width: 768px) {
+  .modal-content-unique {
+    width: 80%;
+    height: 80%;
+  }
+
+  .aktiviteter-container-unique {
+    flex-direction: column;
+  }
+
+  .section-unique {
+    margin-bottom: 20px;
+  }
+
+  .activity-item-unique img {
+    width: 100%;
+    height: auto;
+  }
+}

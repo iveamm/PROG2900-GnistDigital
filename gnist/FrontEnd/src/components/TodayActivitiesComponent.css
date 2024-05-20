@@ -1,0 +1,139 @@
+.today-activities-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 400px; 
+  
+}
+  
+.today-activities-list {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  background-color: #F4F4F4;
+  padding-top: 30px;
+  border-radius: 20px;
+  padding-right: 22px;
+  padding-left: 22px;
+  border:None;
+}
+
+  
+.today-activity-entry {
+  background-color: #FFFFFF;
+  border: 1px solid #D9E3F0;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 90%; 
+  color: #32325D;
+}
+  
+  .today-activity-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .today-activity-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .today-activity-title {
+    font-weight: bold;
+  }
+  
+  .today-activity-text {
+    font-size: 0.8rem;
+  }
+  
+  .today-details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .today-modal-content {
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    color: #32325D;
+    border: 1px solid #D9E3F0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .today-modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .today-modal-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #005A9E;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .today-modal-button:hover {
+    background: #004080;
+    color: #FFFFFF;
+  }
+  
+  .promo-sentence-container {
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents content from spilling out */
+    color:#32325D;
+  }
+  
+  .promo-sentence {
+    font-size: 24px;
+    font-weight: bold;
+    color: black; 
+    margin-bottom: 20px; 
+    opacity: 0;
+    transition: opacity 5s ease-in-out;
+    font-family:fantasy;    
+  }
+  
+  .promo-sentence.visible {
+    opacity: 2;
+  }
+  
+  .message.confirmation {
+    background-color: red; 
+}
+
+.message.error {
+    background-color: red; 
+}

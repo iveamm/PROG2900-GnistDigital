@@ -1,0 +1,136 @@
+.undersøkelser-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  position: relative;
+}
+
+.section {
+  flex: 1;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.question-form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.question-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #005A9E;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.question-form button:hover {
+  background-color: #004080;
+}
+
+.undersokelse-success-message {
+  transition: opacity 0.5s ease-in-out;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #52C41A;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 20px;
+  position: absolute;
+  top: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; 
+}
+
+.questions-list {
+  max-height: calc(100vh - 250px); 
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 171px;
+}
+
+.question-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  cursor: pointer; 
+}
+
+.question-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%; 
+  max-width: 600px; 
+  max-height: 80%; 
+  overflow-y: auto; 
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+
+
+
+.question-details h4 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333333;
+}
+
+.question-details p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555555;
+}
+
+
+.question-details button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+.question-details button:last-child {
+  background-color: red;
+  color: #ffffff;
+}
+
+.question-details button:last-child:hover {
+  background-color: darkred;
+}
+
+.question-details button:first-child {
+  background-color: #6d7d6c;
+  color: #1af207;
+}
+
+@media (max-width: 768px) {
+  .success-message {
+    top: 70px;
+  }
+}

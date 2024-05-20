@@ -1,0 +1,35 @@
+# Virtual environment folder
+myenv/
+
+# Database
+db.sqlite3
+
+# Backend .env file
+gnist/BackEnd/gnist/.env
+
+# Python compiled files
+*.pyc
+__pycache__/
+
+# Django static and media files (if collected)
+/static/
+media/
+
+
+# Logs
+*.log
+
+# Frontend node modules and environment files
+gnist/FrontEnd/node_modules/
+gnist/FrontEnd/.env
+gnist/FrontEnd/build/
+
+# General system files
+.DS_Store
+.vscode/
+.history/
+
+# Ignore all .pyc files except the directory itself
+__pycache__/
+*.py[cod]
+

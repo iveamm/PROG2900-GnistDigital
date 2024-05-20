@@ -1,0 +1,225 @@
+.roed-unique-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-height: calc(100vh - 60px);
+  overflow: auto;
+}
+
+.roed-section {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex: 1;
+  min-width: 300px;
+  height: 570px;
+  overflow-y: auto;
+}
+
+.roed-section:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.roed-section-title {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  border-bottom: 2px solid #ccc;
+}
+
+.roed-section-input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.roed-section-input::placeholder {
+  color: #999;
+}
+
+.roed-section-input:focus {
+  border-color: #005A9E;
+}
+
+.roed-names-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.roed-search-result {
+  padding: 10px;
+  margin: 2px 0;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.roed-search-result:hover {
+  background-color: #e0e0e0;
+}
+
+.roed-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 60%;
+  max-width: 400px;
+}
+
+.roed-modal-content {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.roed-modal-buttons {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.roed-modal-button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  flex: none;
+  margin: 0 10px;
+}
+
+.roed-modal-button-ban {
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 9px 12px;
+  margin-right: 20px; 
+}
+
+.roed-modal-button-close {
+  background-color: orange;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 9px 9px;
+  margin-left: 20px; 
+}
+
+.roed-modal-button-ban:hover {
+  background-color: darkred;
+}
+
+.roed-modal-button-close:hover {
+  background-color: darkorange;
+}
+
+@media (min-width: 768px) {
+  .roed-unique-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.roed-banned-members {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+
+.roed-banned-members .roed-section-title {
+  font-size: 28px;
+  color: #333;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.roed-banned-members .roed-banned-member-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+}
+
+.roed-banned-members .roed-member-info {
+  margin-left: 15px;
+  flex-grow: 1;
+}
+
+.roed-banned-members .roed-member-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.roed-banned-members .roed-member-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.roed-banned-members .banned-date {
+  font-size: 14px;
+  color: #333;
+}
+
+.roed-modal-button-unban {
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 9px 12px;
+}
+
+.roed-modal-button-unban:hover {
+  background-color: darkred;
+}
+
+/* Success message */
+.success-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  z-index: 1500;
+}
+
+.unban-success-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;  
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  z-index: 1500;
+}

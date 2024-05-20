@@ -1,0 +1,183 @@
+.medlems-nivaer-container {
+  background-color: #eaeaea;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+.medlems-nivaer-section-title {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.level-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.level-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.level-info {
+  margin: 0;
+}
+
+.level-button {
+  flex: 1;
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.level-button.edit-button {
+  background-color: #005A9E;
+  padding: 8px 5px;
+  color: white;
+}
+
+.level-button.delete-button {
+  background-color: red;
+  color: white;
+}
+
+.level-button.add-button {
+  background-color: #005A9E;
+  padding: 3px 9px;
+  color: white;
+}
+
+.level-button.add-button:hover {
+  opacity: 0.8;
+}
+
+.success-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(40, 167, 69, 0.9);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  z-index: 1500;
+}
+
+.edit-level-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  z-index: 2000;
+}
+
+.edit-level-modal input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.edit-level-modal button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  background-color: #005A9E;
+  color: white;
+}
+
+.delete-level-confirmation-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  z-index: 2000;
+}
+
+.delete-level-confirmation-modal button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+/* New styles for "Ja" button */
+.delete-level-confirmation-modal button:first-child {
+  background-color: #005A9E; 
+  color: white;
+  padding: 5px 7px;
+}
+
+/* New styles for "Nei" button */
+.delete-level-confirmation-modal button:last-child {
+  background-color: red; 
+  color: white;
+  padding: 7px 12px;
+}
+
+@media (max-width: 767px) {
+  .level-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensures the level-item takes full width */
+  }
+
+  .level-info {
+    flex-basis: 60%; /* Use flex-basis for flexible width */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .level-buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 40%; /* Assign the remaining width to the button container */
+  }
+
+  .level-button.edit-button,
+  .level-button.delete-button {
+    width: 70px; /* Fixed width */
+    padding: 6px 8px;
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 480px) {
+  .level-info {
+    flex-basis: 180%; /* move both buttons to right */
+  }
+
+  .level-buttons-container {
+    justify-content: flex-end;
+    flex-basis: 50%;  
+  }
+
+  .level-button.edit-button,
+  .level-button.delete-button {
+    width: 60px;  
+    padding: 4px 6px;
+    font-size: 0.7em;
+  }
+}
